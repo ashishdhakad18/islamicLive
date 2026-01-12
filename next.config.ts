@@ -1,13 +1,12 @@
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "staging-backend.islamic-relief.ch",
-        pathname: "/uploads/**",
-      },
-    ],
+    unoptimized: true, // ✅ FIX
     dangerouslyAllowSVG: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
   },
 };
 
