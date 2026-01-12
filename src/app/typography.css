@@ -1,0 +1,304 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Headings */
+  .type-h1 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .type-h1 {
+      font-size: 56px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-h1 {
+      font-size: 80px;
+    }
+  }
+
+  .type-h2 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 32px;
+  }
+
+  @media (min-width: 768px) {
+    .type-h2 {
+      font-size: 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-h2 {
+      font-size: 64px;
+    }
+  }
+
+  .type-h3 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .type-h3 {
+      font-size: 36px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-h3 {
+      font-size: 48px;
+    }
+  }
+
+  .type-h4 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .type-h4 {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-h4 {
+      font-size: 40px;
+    }
+  }
+
+  .type-h5 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) {
+    .type-h5 {
+      font-size: 25px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-h5 {
+      font-size: 32px;
+    }
+  }
+
+  .type-h6 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .type-h6 {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-h6 {
+      font-size: 24px;
+    }
+  }
+
+  /* Body */
+  .type-body-1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.625;
+    font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .type-body-1 {
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-body-1 {
+      font-size: 24px;
+    }
+  }
+
+  .type-body-2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.625;
+    font-size: 18px;
+  }
+
+  .type-body-3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.625;
+    font-size: 16px;
+  }
+
+  .type-body-4 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.625;
+    font-size: 14px;
+  }
+
+  .type-body-5 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.625;
+    font-size: 12px;
+  }
+
+  .type-body-6 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    line-height: 1.625;
+    font-size: 14px;
+  }
+
+  /* Captions */
+  .type-caption-1 {
+    font-family: "Lumios Marker", cursive;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 32px;
+  }
+
+  @media (min-width: 768px) {
+    .type-caption-1 {
+      font-size: 36px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-caption-1 {
+      font-size: 40px;
+    }
+  }
+
+  .type-caption-2 {
+    font-family: "Lumios Marker", cursive;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .type-caption-2 {
+      font-size: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-caption-2 {
+      font-size: 32px;
+    }
+  }
+
+  .type-caption-3 {
+    font-family: "Lumios Marker", cursive;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) {
+    .type-caption-3 {
+      font-size: 21px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-caption-3 {
+      font-size: 24px;
+    }
+  }
+
+  /* Buttons */
+  .type-btn-1 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) {
+    .type-btn-1 {
+      font-size: 19px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-btn-1 {
+      font-size: 20px;
+    }
+  }
+
+  .type-btn-2 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .type-btn-2 {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-btn-2 {
+      font-size: 16px;
+    }
+  }
+
+  .type-btn-3 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    font-size: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .type-btn-3 {
+      font-size: 13px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-btn-3 {
+      font-size: 14px;
+    }
+  }
+
+  .type-btn-4 {
+    font-family: "Islamic Relief", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    font-size: 12px;
+  }
+}

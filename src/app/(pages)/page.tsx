@@ -1,0 +1,6 @@
+// Redirect to locale-specific page
+import { redirect } from "next/navigation";
+
+export default function RootPage() {
+  redirect("/en");
+}
