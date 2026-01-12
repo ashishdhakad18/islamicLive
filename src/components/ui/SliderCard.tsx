@@ -1,6 +1,7 @@
 // components/SliderCard.tsx
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Chip } from "./Chip";
 import { Button } from "./Button";
@@ -127,54 +128,71 @@ export default function SliderCard({ card }: SliderCardProps) {
           )}
 
         {/* Action Buttons */}
-      {buttons && buttons.length > 0 && (
-  <div className="flex flex-wrap gap-2 mt-auto">
-    {buttons.map((button, index) => {
-      const isLinkBlueArrow = button.buttonStyle === "link-blue-arrow";
+        {buttons && buttons.length > 0 ? (
+          <div className="flex flex-wrap gap-2 mt-auto">
+            {buttons.map((button, index) => {
+              const isLinkBlueArrow = button.buttonStyle === "link-blue-arrow";
 
-      return (
-        <Button
-          key={index}
-          variant={isLinkBlueArrow ? "ghost" : button.variant || "solid"}
-          color={button.color || "primary"}
-          onClick={button.onClick}
-          href={button.href}
-          className={cn(
-            "font-semibold w-full type-btn-2 group", // 👈 IMPORTANT
-            isLinkBlueArrow &&
-              "flex items-center justify-start px-0! hover:bg-white! hover:text-primary!",
-            button.className
-          )}
-          rounded
-          size="lg"
-          endIcon={
-            isLinkBlueArrow ? (
-              <ArrowRight
-                className="
+              return (
+                <Button
+                  key={index}
+                  variant={
+                    isLinkBlueArrow ? "ghost" : button.variant || "solid"
+                  }
+                  color={button.color || "primary"}
+                  onClick={button.onClick}
+                  href={button.href}
+                  className={cn(
+                    "font-semibold w-full type-btn-2 group", // 👈 IMPORTANT
+                    isLinkBlueArrow &&
+                      "flex items-center justify-start px-0! hover:bg-white! hover:text-primary!",
+                    button.className
+                  )}
+                  rounded
+                  size="lg"
+                  endIcon={
+                    isLinkBlueArrow ? (
+                      <ArrowRight
+                        className="
                   w-5 h-5 text-primary
                   transform -rotate-45
                   transition-transform duration-300 ease-out
                   group-hover:rotate-0
                   group-hover:translate-x-1
                 "
-              />
-            ) : (
+                      />
+                    ) : (
+                      <Image
+                        src="/Icons/Arrow-right-black.svg"
+                        alt="arrow right"
+                        width={15}
+                        height={15}
+                      />
+                    )
+                  }
+                >
+                  {button.label || "Read More"}
+                </Button>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="flex flex-wrap gap-2 mt-auto">
+            <Link
+              href="#"
+              className="group type-btn-2 text-primary-main uppercase flex items-center gap-2 hover:text-primary-main"
+            >
+              <span>Read More</span>
               <Image
-                src="/Icons/Arrow-right-black.svg"
-                alt="arrow right"
-                width={15}
-                height={15}
+                src="/Icons/linkicon.png"
+                alt="Read More"
+                width={10}
+                height={10}
+                className="object-contain transition-transform duration-300 ease-in-out pb-1.5 group-hover:rotate-45"
               />
-            )
-          }
-        >
-          {button.label||"read more"}
-        </Button>
-      );
-    })}
-  </div>
-)}
-
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
