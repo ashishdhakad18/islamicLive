@@ -168,7 +168,7 @@ export default function SliderCard({ card }: SliderCardProps) {
             )
           }
         >
-          {button.label}
+          {button.label||"read more"}
         </Button>
       );
     })}
