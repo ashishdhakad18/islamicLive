@@ -8,6 +8,7 @@ import NavigationDropdown from "@/components/ui/NavigationDropdown";
 import { useAppSelector, useAppDispatch } from "@/store/hooks";
 import { toggleTheme } from "@/store/slices/uiSlice";
 import { locales, Locale } from "@/config/i18n.config";
+import Container from "@/components/layout/Container";
 
 interface SecondaryHeaderProps {
   links?: SocialLinkItem[];
@@ -62,7 +63,7 @@ const SecondaryHeader: React.FC<SecondaryHeaderProps> = ({ links = [] }) => {
               target="_blank"
               rel="noreferrer"
               className={`flex items-center p-[11px] border-r border-t-0 border-b-0 border-grey-grey transition-colors ${
-                idx === 0 ? "pl-8 border-l-grey-grey" : ""
+                idx === 0 ? " border-l-grey-grey" : ""
               } `}
               aria-label={item.label || item.type}
             >
@@ -103,6 +104,7 @@ const SecondaryHeader: React.FC<SecondaryHeaderProps> = ({ links = [] }) => {
   }
 
   return (
+    <Container>
     <div className="w-full  text-white">
       <div className="mx-auto flex items-stretch justify-between border-b border-grey-grey">
         {leftContent}
@@ -165,7 +167,7 @@ const SecondaryHeader: React.FC<SecondaryHeaderProps> = ({ links = [] }) => {
             onClick={() => {
               inputRef.current?.focus();
             }}
-            className="flex cursor-pointer items-center gap-2 border-r border-grey-grey px-6  pr-8  transition-colors group"
+            className="flex cursor-pointer items-center gap-2 border-r border-grey-grey px-6  transition-colors group"
           >
             <Image
               src="/Icons/Search.svg"
@@ -183,6 +185,7 @@ const SecondaryHeader: React.FC<SecondaryHeaderProps> = ({ links = [] }) => {
         </div>
       </div>
     </div>
+    </Container>
   );
 };
 
