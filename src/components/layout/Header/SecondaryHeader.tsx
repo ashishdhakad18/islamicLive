@@ -167,7 +167,7 @@ const SecondaryHeader: React.FC<SecondaryHeaderProps> = ({ links = [] }) => {
             onClick={() => {
               inputRef.current?.focus();
             }}
-            className="flex cursor-pointer items-center gap-2 border-r border-grey-grey px-6  transition-colors group"
+            className="flex cursor-pointer items-center gap-2 border-r border-grey-grey px-6 transition-colors group"
           >
             <Image
               src="/Icons/Search.svg"
