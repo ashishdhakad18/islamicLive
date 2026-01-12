@@ -207,16 +207,16 @@ const PrimaryHeader = ({ sustainableProjects = [] }: PrimaryHeaderProps) => {
           </div>
 
           {/* Drawer Footer (Donate Button) */}
-          <div className="p-6 border-t border-grey-divider">
+          <div className="p-6 border-t border-grey-divider ">
             <Button
-              className="w-full h-[60px]"
-              variant="solid"
+              className="w-full h-[50px] md:h-[60px]  rounded-sm md:rounded-lg"
               color="yellow"
-              rounded={false}
+           
               size="lg"
               href="/donate"
               onClick={() => {
                 setIsMobileMenuOpen(false);
+              
               }}
               startIcon={
                 <Image
