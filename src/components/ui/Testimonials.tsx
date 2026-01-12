@@ -22,9 +22,15 @@ interface TestimonialsProps {
 
 const defaultThumbnails: VideoThumbnail[] = [
   { id: 1, image: "/Images/Thumbnail.png", alt: "Testimonial 1" },
-  { id: 2, image: "/Images/Thumbnail.png", alt: "Testimonial 2" },
+  { id: 2, image: "/Images/water.png", alt: "Testimonial 2" },
   { id: 3, image: "/Images/Thumbnail.png", alt: "Testimonial 3" },
   { id: 4, image: "/Images/Thumbnail.png", alt: "Testimonial 4" },
+];
+const VideoThumbnails: VideoThumbnail[] = [
+  { id: 1, image: "/video/testimonial.mp4", alt: "Testimonial 1" },
+  { id: 2, image: "/video/testimonial.mp4", alt: "Testimonial 2" },
+  { id: 3, image: "/video/testimonial.mp4", alt: "Testimonial 3" },
+  { id: 4, image: "/video/testimonial.mp4", alt: "Testimonial 4" },
 ];
 
 export default function Testimonials({
@@ -40,7 +46,7 @@ export default function Testimonials({
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const activeThumbnail = thumbnails[activeIndex];
-  const videoUrl = activeThumbnail?.videoUrl;
+  const videoUrl = VideoThumbnails[activeIndex]?.image;
   const posterImage = activeThumbnail?.image;
 
   // Check if we have a valid video URL (not an image)
