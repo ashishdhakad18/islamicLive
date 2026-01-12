@@ -21,10 +21,10 @@ interface TestimonialsProps {
 }
 
 const defaultThumbnails: VideoThumbnail[] = [
-  { id: 1, image: "/Images/Thumbnail.png", alt: "Testimonial 1" },
-  { id: 2, image: "/Images/Thumbnail.png", alt: "Testimonial 2" },
-  { id: 3, image: "/Images/Thumbnail.png", alt: "Testimonial 3" },
-  { id: 4, image: "/Images/Thumbnail.png", alt: "Testimonial 4" },
+  { id: 1, image: "/Images/testimonial.mp4", alt: "Testimonial 1" },
+  { id: 2, image: "/Images/testimonial.mp4", alt: "Testimonial 2" },
+  { id: 3, image: "/Images/testimonial.mp4", alt: "Testimonial 3" },
+  { id: 4, image: "/Images/testimonial.mp4", alt: "Testimonial 4" },
 ];
 
 export default function Testimonials({
